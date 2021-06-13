@@ -123,7 +123,7 @@ const weather = {
 	fetchApiWeather: function (cityName, lang) {
 		const _this = this
 		const url =
-			`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&lang=${lang}&units=metric`
+			`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&lang=${lang}&units=metric`
 		fetch(url)
 			.then(response => response.json())
 			.then(data => {
@@ -171,7 +171,7 @@ const weather = {
 
 		// weather main
 		$('.weather-main__status-img').src =
-			`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` || DEFAULT_VALUE
+			`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` || 'http://openweathermap.org/img/wn/03d@2x.png'
 		$('.weather-main__temperature').innerText = Math.round(data.main.temp) || DEFAULT_VALUE
 		$('.weather-main__name').innerText = data.weather[0].description || DEFAULT_VALUE
 		$('.weather-main__city').innerText = data.name || ''
