@@ -171,7 +171,7 @@ const weather = {
 
 		// weather main
 		$('.weather-main__status-img').src =
-			`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` || 'http://openweathermap.org/img/wn/03d@2x.png'
+			`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` || 'https://openweathermap.org/img/wn/03d@2x.png'
 		$('.weather-main__temperature').innerText = Math.round(data.main.temp) || DEFAULT_VALUE
 		$('.weather-main__name').innerText = data.weather[0].description || DEFAULT_VALUE
 		$('.weather-main__city').innerText = data.name || ''
