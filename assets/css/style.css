@@ -195,10 +195,6 @@ body {
 .weather-main__country {
 	font-size: 1.6rem;
 	font-weight: 600;
-	display: webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
 }
 
 .weather-main__date {
@@ -299,4 +295,45 @@ body {
 
 .copyright-author {
 	font-weight: 600;
+}
+
+@media (min-width: 372px) and (max-width: 439px) {
+	.weather-main__temperature {
+		font-size: 6rem;
+	}
+
+	.weather-main__temperature::after {
+		right: -15px;
+		font-size: 3rem;
+	}
+
+	.weather-main__name {
+		font-size: 2.5rem;
+	}
+
+	.weather-main__city,
+	.weather-main__country {
+		font-size: 1.4rem;
+	}
+
+	.weather-main__date {
+		font-size: 2.2rem;
+	}
+}
+
+@media (max-width: 371px) {
+	.weather-main__temperature {
+		font-size: 5rem;
+	}
+
+	.weather-main__name {
+		font-size: 2rem;
+		margin-bottom: 5px;
+	}
+
+	.weather-main__temperature::after {
+		top: -4px;
+		right: -20px;
+		font-size: 3rem;
+	}
 }
